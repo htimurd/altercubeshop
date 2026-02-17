@@ -220,4 +220,24 @@
     }
 </script>
 </body>
+</html>    </div> <!-- закрываем container -->
+    <script>
+        function openAuth(type) {
+            document.getElementById('modalOverlay').style.display = 'flex';
+            document.getElementById('loginForm').style.display = type === 'login' ? 'block' : 'none';
+            document.getElementById('regForm').style.display = type === 'reg' ? 'block' : 'none';
+        }
+        function closeAll() {
+            document.getElementById('modalOverlay').style.display = 'none';
+        }
+        function openBuy(name, price) {
+            document.getElementById('modalOverlay').style.display = 'flex';
+            document.getElementById('buyForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('regForm').style.display = 'none';
+            document.getElementById('buyTitle').innerText = 'Покупка: ' + name;
+            document.getElementById('itemPrice').innerText = price;
+        }
+    </script>
+</body>
 </html>
